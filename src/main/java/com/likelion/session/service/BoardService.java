@@ -18,7 +18,7 @@ import java.util.List;
 @Transactional
 public class BoardService {
 
-    private final BoardRepository boardRepository;
+    private final ;
 
     /*
         게시글 생성

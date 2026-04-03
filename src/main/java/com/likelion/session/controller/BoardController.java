@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BoardController {
 
-    private final BoardService boardService;
+    private final ;
 
     /*
         게시글 생성
@@ -36,7 +36,7 @@ public class BoardController {
             summary = "게시글 생성",
             description = "새로운 게시글을 생성합니다."
     )
-    @PostMapping
+    @
     public ResponseEntity<BoardResponse> create(@RequestBody BoardCreateRequest request) {
         BoardResponse response = boardService.create(request);
         return ResponseEntity.ok(response);
@@ -47,7 +47,7 @@ public class BoardController {
             summary = "게시글 전체 조회",
             description = "등록된 모든 게시글을 조회합니다."
     )
-    @GetMapping
+    @
     public ResponseEntity<List<BoardResponse>> findAll() {
         List<BoardResponse> response = boardService.findAll();
         return ResponseEntity.ok(response);
@@ -69,7 +69,7 @@ public class BoardController {
             summary = "게시글 수정",
             description = "id로 특정 게시글의 제목과 내용을 수정합니다."
     )
-    @PutMapping("/{id}")
+    @("/{id}")
     public ResponseEntity<BoardResponse> update(@PathVariable Long id,
                                                 @RequestBody BoardUpdateRequest request) {
         BoardResponse response = boardService.update(id, request);
@@ -81,7 +81,7 @@ public class BoardController {
             summary = "게시글 삭제",
             description = "id로 특정 게시글을 삭제합니다."
     )
-    @DeleteMapping("/{id}")
+    @("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         boardService.delete(id);
         return ResponseEntity.noContent().build();

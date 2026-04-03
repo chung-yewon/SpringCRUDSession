@@ -8,8 +8,8 @@ import lombok.AllArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Getter
-@Entity
+@Getter // getter 메서드 자동 생성
+@Entity // 해당 클래스 DB 테이블로 인식하고 관리
 @Table(name = "boards")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -17,27 +17,27 @@ public class Board {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ;
 
     // 게시글 제목
     @Column(nullable = false, length = 100)
-    private String title;
+    private String ;
 
     // 게시글 내용
     @Column(nullable = false, columnDefinition = "TEXT")
-    private String content;
+    private String ;
 
     // 작성자
     @Column(nullable = false, length = 30)
-    private String writer;
+    private String ;
 
     // 생성 시간
     @Column(nullable = false)
-    private LocalDateTime createdAt;
+    private LocalDateTime ;
 
     // 수정 시간
     @Column(nullable = false)
-    private LocalDateTime updatedAt;
+    private LocalDateTime ;
 
 
     public Board(String title, String content, String writer) {
